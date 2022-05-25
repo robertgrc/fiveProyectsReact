@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Todo } from "./Todo";
+import "./TodoApp.css";
 
 export const TodoApp = () => {
   const [title, setTitle] = useState("hello");
@@ -51,6 +52,7 @@ export const TodoApp = () => {
   function handleDelete(id) {
     const temp = todos.filter((item) => item.id !== id);
     setTodos(temp);
+    setTitle("");
   }
 
   return (
